@@ -2,9 +2,9 @@
 
 Solução **.NET 10** criada via terminal (.NET CLI) para gerenciar o cálculo de cupons, itens e frete de uma loja online, com **testes unitários em xUnit** (`Assert.Equal`, `Assert.True` e `Assert.False`).
 
-> Atividade da disciplina **Garantia da Qualidade de Software** — Prof. Daniel Henrique Matos de Paiva (Lista de Exercícios 22).
+> Atividade da disciplina **Garantia da Qualidade de Software** — Prof. Daniel Henrique Matos de Paiva
 
-## 📁 Estrutura da solução
+## Estrutura da solução
 
 ```
 ecommerce-checkout-xunit/
@@ -18,7 +18,7 @@ ecommerce-checkout-xunit/
     └── PedidoServiceTests.cs           # Testes com [Fact]
 ```
 
-## 🧩 Métodos implementados (`PedidoService.cs`)
+##  Métodos implementados (`PedidoService.cs`)
 
 | # | Assinatura | Retorno | Regra de negócio | Exemplo |
 |---|------------|---------|------------------|---------|
@@ -26,7 +26,7 @@ ecommerce-checkout-xunit/
 | 2 | `CalcularPontosFidelidade(int valorTotal)` | `int` | A cada R$ 10 em compras, o cliente ganha 2 pontos de fidelidade | `150` → `30` (15 parcelas de R$ 10 × 2 pontos) |
 | 3 | `TemDireitoAFreteGratis(int valorTotal, bool eClienteVIP)` | `bool` | Frete grátis se o valor total for **≥ R$ 200** OU se o comprador for **cliente VIP** | `(150, true)` → `true` · `(150, false)` → `false` |
 
-## ✅ Cobertura dos testes (`PedidoServiceTests.cs`)
+##  Cobertura dos testes (`PedidoServiceTests.cs`)
 
 Todos os testes utilizam o atributo **`[Fact]`** (teste único, sem parâmetros):
 
@@ -39,7 +39,7 @@ Todos os testes utilizam o atributo **`[Fact]`** (teste único, sem parâmetros)
 
 **Resultado esperado: 4 testes aprovados (Passed! - 4).**
 
-## ▶️ Como executar
+##  Como executar
 
 Pré-requisito: [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) instalado.
 
@@ -54,7 +54,7 @@ Saída esperada:
 Passed!  - Failed: 0, Passed: 4, Skipped: 0, Total: 4
 ```
 
-## 🛠️ Como a solução foi criada (.NET CLI)
+##  Como a solução foi criada (.NET CLI)
 
 ```bash
 # 1. Cria a Solução
@@ -74,6 +74,6 @@ dotnet sln add EcommerceCheckout.Tests/EcommerceCheckout.Tests.csproj
 dotnet add EcommerceCheckout.Tests/EcommerceCheckout.Tests.csproj reference EcommerceCheckout.App/EcommerceCheckout.App.csproj
 ```
 
-## 📄 Licença
+## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
